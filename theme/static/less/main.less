@@ -1,0 +1,224 @@
+@import "reset";
+@import "grid";
+@import "fonts";
+@import "mixins";
+@import "keyframes";
+@import "var";
+
+@import "index";
+
+@import "../css/font-awesome.min.css";
+@import "../libs/lightslider/css/lightslider.min.css";
+@import "../libs/fancybox/jquery.fancybox.css";
+@import "../libs/formstyler/jquery.formstyler.css";
+@import "../libs/jqueryui/jquery-ui.css";
+
+
+
+html, body, .wrapper{
+  height: 100%;
+  .main{
+    min-height: 100%;
+    margin-bottom: -@footer-size;
+    .all{
+      padding-bottom: @footer-size;
+    }
+  }
+  .footer{
+    padding: 10px 0;
+    background: #e1e1e1;
+    color: #666;
+    min-height: @footer-size;
+    overflow: hidden;
+    .footer__copy{
+      margin-top: 5px;
+      line-height: 30px;
+    }
+    .footer__madesite{
+      margin-top: 5px;
+      float: right;
+      a{
+        color: #000000;
+      }
+      @media (max-width: 992px) {
+        float: none;
+      }
+    }
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+  }
+}
+
+body{
+  a{
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  button{
+    cursor: pointer;
+  }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  p{
+    line-height: 25px;
+  }
+}
+
+.breadcrumbs{
+  margin-bottom: 15px;
+  .breadcrumbs__list{
+    .breadcrumbs__item{
+      display: inline-block;
+      margin-right: 10px;
+      .breadcrumbs__link{
+        color: #000000;
+        &:hover{
+          text-decoration: none;
+          color: @main-color;
+        }
+        &::after{
+          content: ' >';
+          color: #000000;
+        }
+      }
+      .breadcrumbs__nolink{}
+    }
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+#login{
+  max-width: 400px;
+  .login-tabs{
+    padding: 0 15px;
+    .tabs{
+      text-align: center;
+      font-size: 0;
+      .tab{
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px 15px 15px;
+      }
+      .active { color: red; }
+    }
+    .tab_content{
+      .tab_item{}
+      .login-tabs__input{
+        display: block;
+        width: 90%;
+        height: 30px;
+        padding-left: 20px;
+        margin: 0 auto 15px;
+      }
+      p{
+        text-align: center;
+      }
+      input[type="checkbox"]{
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+      label{
+        vertical-align: middle;
+      }
+      .login-tabs__btn{
+        .btn-hover();
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        vertical-align: middle;
+        min-width: 170px;
+        height: 35px;
+        font-size: 18px;
+        color: #ffffff;
+        background-color: @main-color;
+      }
+      .login-tabs__btn_reg{
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+#head-phone{
+  padding: 10px 5px;
+  width: 300px;
+  h4{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  input{
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    margin: 0 auto 10px;
+  }
+  button{
+    display: block;
+    width: 100%;
+    height: 35px;
+    margin: 0 auto 10px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: @main-color;
+    .btn-hover();
+  }
+}
+.old-browser{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -300px;
+  width: 600px;
+  min-height: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  z-index: 100;
+  text-align: center;
+  p{
+    text-transform: uppercase;
+    font-size: 26px;
+    color: #ff0000;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  a{
+    display: inline-block;
+    margin: 0 20px;
+    img{
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+.old-browser-shadow{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.ui-widget-header{
+  background-color: @main-color;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+  background-color: @acc-color2;
+}

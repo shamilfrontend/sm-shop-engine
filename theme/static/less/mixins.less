@@ -1,0 +1,150 @@
+
+.btn-hover(){
+  transition: .5s all;
+  &:hover{
+    color: #ffffff;
+    background-color: lighten(@main-color, 10%);
+  }
+}
+
+// mixsin product
+.product-box(@pb: 40px){
+  vertical-align: top;
+  position: relative;
+  padding-bottom: @pb;
+  min-height: 400px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.product-box__znak(){
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 10;
+  div{
+    display: block;
+    width: 57px;
+    height: 57px;
+    line-height: 57px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 100%;
+    margin-bottom: -15px;
+  }
+};
+.product-box__img(@w: 200px, @h:200px){
+  width: @w;
+  height: @h;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  padding: 10px;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+.products-box__title(@li: 20px){
+  text-align: center;
+  margin-bottom: 5px;
+  line-height: @li;
+  padding: 5px;
+  font-size: 16px;
+  a{
+    color: #000000;
+    font-weight: 600;
+    &:hover{
+      text-decoration: none;
+      color: @acc-color2;
+    }
+  }
+}
+.products-box__price(){
+  text-align: center;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  span{
+    font-weight: bold;
+    &::after{
+      content: ' ₽';
+    }
+  }
+}
+.products-box__addcart(){
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  a{
+    .add-cart();
+  }
+}
+// mixsin product end
+
+.module-title(){
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.boxsh(){
+  box-shadow: 0 0 5px rgba(0,0,0, 0.3);
+}
+
+.add-cart(@bg: @red-color){
+  display: inline-block;
+  background-color: @bg;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 10px 15px;
+  transition: .5s all;
+  &:hover{
+    background-color: lighten(@bg, 10%);
+  }
+  &:active{
+    background-color: darken(@bg, 10%);
+  }
+}
+
+.form-elem-focus(){
+  box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2);
+  transition: 10s all;
+  &:focus{
+    border-color: @main-color;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(255,110,61,.075), 1px 1px 2px 1px rgba(255,110,61,.4);
+  }
+}
+
+.rubl(){
+  content: ' ₽';
+}
+
+.you-social-item(@color){
+  background-color: #fff;
+  color: @color;
+  border: 1px solid @color;
+  padding: 5px;
+  transition: .5s all;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: block;
+  &:hover{
+    color: #ffffff;
+    background-color: @color;
+  }
+}
